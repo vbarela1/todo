@@ -1,0 +1,18 @@
+<h1>
+To Do List
+</h1>
+
+<h2>
+  <%= @todo.title %>
+</h2>
+<p>
+  Description: <%= @todo.description%>
+</p>
+<p>
+  Posted At: <%= @todo.created_at %>
+</p>
+
+<%= link_to 'All Posts', root_path %> 
+<%= link_to 'Edit', edit_todos_path(@todo) %>
+<%= link_to 'Delete', todos_path(@todo), method: :delete, data: {confirm: 'Really Delete?'} %>
+

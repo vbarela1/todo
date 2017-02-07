@@ -1,0 +1,10 @@
+<h1>All To Do Lists</h1>
+<ul>
+   <% @todos.each do |todo| %> 
+ <li>
+  <%= link_to todo.title, todo_show_path(todo)%>
+ </li>
+ <% end %>
+</ul>
+
+<%= link_to 'New Post', todo_new_path %> 
